@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerVehicleRegistration", "ConsumerVehicleRegistration\ConsumerVehicleRegistration.csproj", "{F7CDC2EC-136F-46C7-960F-1D9ED7B8DD3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommercialRegistration", "CommercialRegistration\CommercialRegistration.csproj", "{D8DD7B1E-769B-465D-927E-B03A237A87A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveryRegistration", "LiveryRegistration\LiveryRegistration.csproj", "{C03C3DBC-5FA1-4829-B912-38704CC3EE12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toll_calculator", "toll_calculator\toll_calculator.csproj", "{C2C92D8D-9BF2-48AC-B676-BE5EF854848C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{F7CDC2EC-136F-46C7-960F-1D9ED7B8DD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7CDC2EC-136F-46C7-960F-1D9ED7B8DD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7CDC2EC-136F-46C7-960F-1D9ED7B8DD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DD7B1E-769B-465D-927E-B03A237A87A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DD7B1E-769B-465D-927E-B03A237A87A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DD7B1E-769B-465D-927E-B03A237A87A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DD7B1E-769B-465D-927E-B03A237A87A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C03C3DBC-5FA1-4829-B912-38704CC3EE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C03C3DBC-5FA1-4829-B912-38704CC3EE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C03C3DBC-5FA1-4829-B912-38704CC3EE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C03C3DBC-5FA1-4829-B912-38704CC3EE12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C92D8D-9BF2-48AC-B676-BE5EF854848C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C92D8D-9BF2-48AC-B676-BE5EF854848C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C92D8D-9BF2-48AC-B676-BE5EF854848C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C92D8D-9BF2-48AC-B676-BE5EF854848C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
