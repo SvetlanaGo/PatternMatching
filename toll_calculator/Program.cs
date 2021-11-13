@@ -9,7 +9,7 @@ namespace toll_calculator
     {
         static void Main(string[] args)
         {
-            var tollCalc = new TollCalculator();
+            ITollCalculator tollCalc = new TollCalculatorByGrossWeight(new TollCalculatorByFull(new TollCalculatorBase()));
 
             var soloDriver = new Car();
             var twoRideShare = new Car { Passengers = 1 };
@@ -79,20 +79,26 @@ namespace toll_calculator
 
             foreach (var time in testTimes)
             {
-                Console.WriteLine($"Inbound premium at {time} is {tollCalc.PeakTimePremiumIfElse(time, true)}");
-                Console.WriteLine($"Outbound premium at {time} is {tollCalc.PeakTimePremiumIfElse(time, false)}");
+                Console.WriteLine($"Inbound premium for a solo driver at {time} is {tollCalc.CalculateToll(soloDriver, time, true)}");
+                Console.WriteLine($"Outbound premium for a fullVan at {time} is {tollCalc.CalculateToll(fullVan, time, false)}");
             }
             Console.WriteLine("====================================================");
             foreach (var time in testTimes)
             {
-                Console.WriteLine($"Inbound premium at {time} is {tollCalc.PeakTimePremiumFull(time, true)}");
-                Console.WriteLine($"Outbound premium at {time} is {tollCalc.PeakTimePremiumFull(time, false)}");
+                Console.WriteLine($"Inbound premium for an empty taxi at {time} is {tollCalc.CalculateToll(emptyTaxi, time, true)}");
+                Console.WriteLine($"Outbound premium for a full van taxi at {time} is {tollCalc.CalculateToll(fullVanPool, time, false)}");
             }
             Console.WriteLine("====================================================");
             foreach (var time in testTimes)
             {
-                Console.WriteLine($"Inbound premium at {time} is {tollCalc.PeakTimePremium(time, true)}");
-                Console.WriteLine($"Outbound premium at {time} is {tollCalc.PeakTimePremium(time, false)}");
+                Console.WriteLine($"Inbound premium for a low-occupant bus at {time} is {tollCalc.CalculateToll(lowOccupantBus, time, true)}");
+                Console.WriteLine($"Outbound premium for a bus at {time} is {tollCalc.CalculateToll(fullBus, time, false)}");
+            }
+            Console.WriteLine("====================================================");
+            foreach (var time in testTimes)
+            {
+                Console.WriteLine($"Inbound premium for a truck at {time} is {tollCalc.CalculateToll(heavyTruck, time, true)}");
+                Console.WriteLine($"Outbound premium for a truck at {time} is {tollCalc.CalculateToll(lightTruck, time, false)}");
             }
 
             Console.ReadKey();
